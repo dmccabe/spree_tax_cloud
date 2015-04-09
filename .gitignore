@@ -22,3 +22,4 @@ tags
 *.orig
 .sass-cache
 .DS_Store
+.idea

@@ -5,6 +5,7 @@ Spree::LineItem.class_eval do
     key << "#{self.quantity}x"
     key << "<#{variant.cache_key}>"
     key << "@#{self.price}#{self.currency}"
+    key << "promo<#{self.promo_total}>"
     if order.ship_address
       key << "to<#{self.order.ship_address.try(:cache_key)}>"
     elsif order.billing_address
